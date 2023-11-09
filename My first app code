@@ -1,0 +1,40 @@
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Text(
+            "My First App",
+            style: TextStyle(
+              color: Color(0xfff4ff50),
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        body: Material(
+          child: Center(
+            // child: Text(
+            //   "First Heading",
+            //   style: TextStyle(
+            //     fontSize: 20,
+            //   ),
+            // ),
+            child: ElevatedButton (
+              child: Text("Click Here"),
+              onPressed: () {
+                print("Pressed");
+              },
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
