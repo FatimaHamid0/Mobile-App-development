@@ -1,0 +1,86 @@
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Text(
+            "My First App",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Color(0xfff4ff50),
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        body: Material(
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 100, 20, 10),
+                    child: TextField(
+                      keyboardType: TextInputType.name,
+                      textInputAction: TextInputAction.go,
+                      decoration: InputDecoration(
+                        hintText: "Enter your name",
+                        labelText: "Name",
+                        border: OutlineInputBorder(),
+                        icon: Icon(Icons.person),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: TextField(
+                      keyboardType: TextInputType.name,
+                      textInputAction: TextInputAction.go,
+                      decoration: InputDecoration(
+                        hintText: "Enter your email",
+                        labelText: "Email",
+                        border: OutlineInputBorder(),
+                        icon: Icon(Icons.email),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: TextField(
+                      keyboardType: TextInputType.name,
+                      textInputAction: TextInputAction.go,
+                      decoration: InputDecoration(
+                        hintText: "Enter your PhoneNumber",
+                        labelText: "PhoneNumber",
+                        border: OutlineInputBorder(),
+                        icon: Icon(Icons.phone),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: ElevatedButton(
+                        child: Padding(
+                          padding: EdgeInsets.all(20),
+                          child: Text("Sign Up"),
+                        ),
+                        onPressed: () {
+                          print("Pressed");
+                        },
+                      )),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
